@@ -24,7 +24,7 @@ export function AsciiBlock({ ascii, className = '' }: AsciiBlockProps) {
       borderRadius: '4px',
     }}>
       <pre
-        className="ascii-block p-4 text-sm"
+        className="ascii-block p-4 "
         style={{
           fontFamily: 'var(--font-mono), "IBM Plex Mono", monospace',
           fontVariantLigatures: 'none',
