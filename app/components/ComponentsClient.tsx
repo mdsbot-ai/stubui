@@ -9,6 +9,7 @@ import { CATEGORIES } from '@/lib/data';
 export function ComponentsClient({ components }: { components: Component[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [query, setQuery] = useState('');
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const filtered = query.trim()
     ? new Fuse(components, { keys: ['name', 'description', 'category'], threshold: 0.3 })
@@ -20,21 +21,69 @@ export function ComponentsClient({ components }: { components: Component[] }) {
     categoryCounts[c.category] = (categoryCounts[c.category] || 0) + 1;
   }
 
+  const handleCategorySelect = (cat: string) => {
+    setSelectedCategory(cat);
+    setQuery('');
+    setSidebarOpen(false);
+  };
+
   return (
-    <div style={{ display: 'flex', gap: '0', flex: 1 }}>
+    <div className="components-layout" style={{ display: 'flex', gap: '0', flex: 1 }}>
+      {/* Mobile sidebar toggle */}
+      <button
+        className="sidebar-toggle"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+        style={{
+          display: 'none',
+          position: 'fixed',
+          bottom: '16px',
+          right: '16px',
+          zIndex: 91,
+          background: 'var(--accent)',
+          color: 'var(--accent-fg)',
+          border: 'none',
+          fontFamily: 'var(--font-mono), monospace',
+          fontSize: '12px',
+          padding: '10px 16px',
+          cursor: 'pointer',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+        }}
+      >
+        {sidebarOpen ? '✕ close' : '≡ filter'}
+      </button>
+
+      {/* Sidebar overlay for mobile */}
+      {sidebarOpen && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 49,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            zIndex: 89,
+            background: 'rgba(0,0,0,0.5)',
+          }}
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside style={{
-        width: '200px',
-        flexShrink: 0,
-        borderRight: '1px solid var(--border)',
-        padding: '24px 0',
-        position: 'sticky',
-        top: '49px',
-        height: 'calc(100vh - 49px)',
-        overflowY: 'auto',
-      }}>
+      <aside
+        className={`components-sidebar ${sidebarOpen ? 'open' : ''}`}
+        style={{
+          width: '200px',
+          flexShrink: 0,
+          borderRight: '1px solid var(--border)',
+          padding: '24px 0',
+          position: 'sticky',
+          top: '49px',
+          height: 'calc(100vh - 49px)',
+          overflowY: 'auto',
+        }}
+      >
         <button
-          onClick={() => { setSelectedCategory('all'); setQuery(''); }}
+          onClick={() => handleCategorySelect('all')}
           style={{
             display: 'block',
             width: '100%',
@@ -53,7 +102,7 @@ export function ComponentsClient({ components }: { components: Component[] }) {
         {Object.entries(CATEGORIES).map(([id, label]) => (
           <button
             key={id}
-            onClick={() => { setSelectedCategory(id); setQuery(''); }}
+            onClick={() => handleCategorySelect(id)}
             style={{
               display: 'block',
               width: '100%',
@@ -73,7 +122,7 @@ export function ComponentsClient({ components }: { components: Component[] }) {
       </aside>
 
       {/* Main content */}
-      <main style={{ flex: 1, padding: '24px', overflowY: 'auto' }}>
+      <main className="components-main" style={{ flex: 1, padding: '24px', overflowY: 'auto' }}>
         <input
           type="text"
           placeholder="Search..."

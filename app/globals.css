@@ -49,3 +49,48 @@ body {
   overflow-x: auto;
   line-height: 1.5;
 }
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  .hamburger-btn {
+    display: block !important;
+  }
+  .components-sidebar {
+    display: none;
+  }
+  .components-sidebar.open {
+    display: flex;
+    position: fixed;
+    top: 49px;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    z-index: 90;
+    background: var(--bg);
+    border-right: 1px solid var(--border);
+    flex-direction: column;
+    padding: 16px 0;
+    overflow-y: auto;
+  }
+  .components-main {
+    padding: 16px !important;
+  }
+  .components-layout {
+    flex-direction: column !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .hamburger-btn {
+    display: none !important;
+  }
+  .mobile-nav {
+    display: none !important;
+  }
+  .sidebar-toggle {
+    display: none !important;
+  }
+}
