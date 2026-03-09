@@ -1,0 +1,22 @@
+export interface Component {
+  name: string;
+  slug: string;
+  category: string;
+  ascii: string;
+  description: string;
+  sizing: string;
+  source: string;
+}
+
+export interface Layout {
+  name: string;
+  slug: string;
+  description: string;
+  ascii: string;
+}
+
+export type Category = {
+  id: string;
+  label: string;
+  count: number;
+};

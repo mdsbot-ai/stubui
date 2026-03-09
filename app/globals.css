@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --bg: #fafafa;
+  --fg: #111111;
+  --muted: #666666;
+  --border: #e4e4e4;
+  --card-bg: #ffffff;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --accent: #111111;
+  --accent-fg: #ffffff;
+}
+
+.dark {
+  --bg: #0c0c0c;
+  --fg: #f0f0f0;
+  --muted: #888888;
+  --border: #222222;
+  --card-bg: #141414;
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  --accent: #f0f0f0;
+  --accent-fg: #0c0c0c;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* ASCII block rules - CRITICAL for alignment */
+.ascii-block {
+  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
+  white-space: pre;
+  letter-spacing: 0;
+  tab-size: 4;
+  overflow-x: auto;
+  line-height: 1.5;
 }

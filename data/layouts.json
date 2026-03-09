@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dashboard",
+    "slug": "dashboard",
+    "description": "Admin dashboard with sidebar, stats, and data table",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ sidebar ] (~ - - - - - - - - - - ~)\n[ sidebar ] | stat | stat | stat |\n[ sidebar ] (~ - - - - - - - - - - ~)\n[ sidebar ] | - - table - - - - - -|\n[ sidebar ] | - - - - - - - - - - -|"
+  },
+  {
+    "name": "Landing Page",
+    "slug": "landing-page",
+    "description": "Marketing landing page with hero, features, and footer",
+    "ascii": "[logo] (~ - - nav - - ~) [btn]\n(~ - - - - hero - - - - ~)\n(~ - - - - hero - - - - ~)\n| feature | feature | feature |\n(~ - - testimonials - - ~)\n(~ - - - - cta - - - - ~)\n(~ - - - footer - - - ~)"
+  },
+  {
+    "name": "Settings Page",
+    "slug": "settings-page",
+    "description": "Settings with sidebar nav and form fields",
+    "ascii": "[logo] (~ - - nav - - ~) (avatar)\n[ sidebar ] (~ - - - - - - - - ~)\n[ sidebar ] [ label ] (~ input ~)\n[ sidebar ] [ label ] (~ input ~)\n[ sidebar ] [ label ] (~ select ~)\n[ sidebar ] (~ ~) [ save ] [cancel]"
+  },
+  {
+    "name": "Blog",
+    "slug": "blog",
+    "description": "Blog layout with header, article grid, and sidebar",
+    "ascii": "[logo] (~ - - nav - - ~)\n(~ - - - hero - - - ~)\n(~ - - - - - - - - - - - - - - - - ~)\n(~ article ~)(~ article ~)[ sidebar ]\n(~ article ~)(~ article ~)[ sidebar ]\n(~ - - - footer - - - ~)"
+  },
+  {
+    "name": "E-Commerce",
+    "slug": "ecommerce",
+    "description": "Product listing with filters sidebar and grid",
+    "ascii": "[logo] (~ search - - - - - ~) [cart]\n[ filters ] (~ - - - - - - - - - - ~)\n[ filters ] | prod | prod | prod |\n[ filters ] | prod | prod | prod |\n[ filters ] (pagination)\n(~ - - - footer - - - ~)"
+  }
+]
