@@ -19,7 +19,7 @@ export function SiteHeader() {
         top: 0,
         zIndex: 100,
       }}>
-        <Link href="/" style={{ color: 'var(--fg)', textDecoration: 'none', fontWeight: 'bold', fontSize: '13px' }}>
+        <Link href="/" style={{ color: 'var(--fg)', textDecoration: 'none', fontWeight: '400', fontSize: '13px' }}>
           stubui
         </Link>
         <nav className="desktop-nav" style={{ display: 'flex', gap: '16px', flex: 1 }}>
@@ -86,7 +86,7 @@ export function SiteHeader() {
         }}
       >
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px' }}>
-          <span style={{ fontWeight: 'bold', fontSize: '13px', color: 'var(--fg)' }}>stubui</span>
+          <span style={{ fontWeight: '400', fontSize: '13px', color: 'var(--fg)' }}>stubui</span>
           <button
             onClick={() => setMenuOpen(false)}
             style={{

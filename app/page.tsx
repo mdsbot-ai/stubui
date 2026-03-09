@@ -20,7 +20,7 @@ export default function HomePage() {
           }}>
 {`stubui — ASCII UI component library`}
           </pre>
-          <h1 style={{ margin: '0 0 16px 0', fontSize: '13px', fontWeight: 'bold', lineHeight: 1.2 }}>
+          <h1 style={{ margin: '0 0 16px 0', fontSize: '13px', fontWeight: '400', lineHeight: 1.2 }}>
             Design UI in plain text.
           </h1>
           <p style={{ margin: '0 0 8px 0', color: 'var(--muted)', fontSize: '13px', maxWidth: '560px' }}>
@@ -43,7 +43,7 @@ export default function HomePage() {
         </div>
 
         <div style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <h2 style={{ margin: 0, fontSize: '13px', fontWeight: 'bold' }}>Components ({components.length})</h2>
+          <h2 style={{ margin: 0, fontSize: '13px', fontWeight: '400' }}>Components ({components.length})</h2>
         </div>
         <HomeSearch components={components} />
       </main>

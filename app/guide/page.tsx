@@ -22,14 +22,14 @@ export default function GuidePage() {
     <div style={{ minHeight: '100vh' }}>
       <SiteHeader />
       <main style={{ maxWidth: '800px', margin: '0 auto', padding: '48px 24px' }}>
-        <h1 style={{ margin: '0 0 8px', fontSize: '13px', fontWeight: 'bold' }}>Notation Guide</h1>
+        <h1 style={{ margin: '0 0 8px', fontSize: '13px', fontWeight: '400' }}>Notation Guide</h1>
         <p style={{ margin: '0 0 48px', color: 'var(--muted)', fontSize: '13px' }}>
           The stubui notation system lets you describe UI layout in plain ASCII text.
           Borrowed from Figma&apos;s auto layout mental model.
         </p>
 
         <section style={{ marginBottom: '48px' }}>
-          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: 'bold' }}>The Three Sizing Modes</h2>
+          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: '400' }}>The Three Sizing Modes</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {notationExamples.slice(0, 3).map((ex) => (
               <div key={ex.label}>
@@ -41,7 +41,7 @@ export default function GuidePage() {
         </section>
 
         <section style={{ marginBottom: '48px' }}>
-          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: 'bold' }}>Layout Patterns</h2>
+          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: '400' }}>Layout Patterns</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
             {notationExamples.slice(3).map((ex) => (
               <div key={ex.label}>
@@ -53,7 +53,7 @@ export default function GuidePage() {
         </section>
 
         <section style={{ marginBottom: '48px' }}>
-          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: 'bold' }}>Symbol Reference</h2>
+          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: '400' }}>Symbol Reference</h2>
           <div style={{
             border: '1px solid var(--border)',
             background: 'var(--card-bg)',
@@ -92,7 +92,7 @@ export default function GuidePage() {
         </section>
 
         <section>
-          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: 'bold' }}>Prompt Tips</h2>
+          <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: '400' }}>Prompt Tips</h2>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontSize: '13px', color: 'var(--muted)' }}>
             <p style={{ margin: 0 }}>1. Start with the layout structure, then describe components within regions.</p>
             <p style={{ margin: 0 }}>2. Use fill/fixed/hug notation to specify sizing intent clearly.</p>

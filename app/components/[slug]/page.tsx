@@ -41,13 +41,13 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
           </span>
         </div>
 
-        <h1 style={{ margin: '16px 0 8px', fontSize: '13px', fontWeight: 'bold' }}>{component.name}</h1>
+        <h1 style={{ margin: '16px 0 8px', fontSize: '13px', fontWeight: '400' }}>{component.name}</h1>
         <p style={{ margin: '0 0 32px', color: 'var(--muted)', fontSize: '13px' }}>{component.description}</p>
 
         <AsciiBlock ascii={component.ascii} />
 
         <div style={{ marginTop: '32px', padding: '16px', border: '1px solid var(--border)' }}>
-          <p style={{ margin: '0 0 8px', fontSize: '13px', color: 'var(--muted)', fontWeight: 'bold' }}>DETAILS</p>
+          <p style={{ margin: '0 0 8px', fontSize: '13px', color: 'var(--muted)', fontWeight: '400' }}>DETAILS</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'auto 1fr', gap: '4px 16px', fontSize: '13px' }}>
             <span style={{ color: 'var(--muted)' }}>category</span>
             <span>{CATEGORIES[component.category] || component.category}</span>
@@ -62,7 +62,7 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
 
         {related.length > 0 && (
           <div style={{ marginTop: '48px' }}>
-            <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: 'bold' }}>
+            <h2 style={{ margin: '0 0 16px', fontSize: '13px', fontWeight: '400' }}>
               Related in {CATEGORIES[component.category] || component.category}
             </h2>
             <div style={{
@@ -74,7 +74,7 @@ export default async function ComponentPage({ params }: { params: Promise<{ slug
                 <div key={rel.slug}>
                   <Link href={`/components/${rel.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                     <AsciiBlock ascii={rel.ascii} />
-                    <p style={{ margin: '8px 0 0', fontSize: '13px', fontWeight: 'bold' }}>{rel.name}</p>
+                    <p style={{ margin: '8px 0 0', fontSize: '13px', fontWeight: '400' }}>{rel.name}</p>
                   </Link>
                 </div>
               ))}
