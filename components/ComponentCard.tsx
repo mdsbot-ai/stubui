@@ -13,8 +13,8 @@ export function ComponentCard({ component }: { component: Component }) {
         <AsciiBlock ascii={component.ascii} />
       </Link>
       <div>
-        <p style={{ margin: 0, fontSize: '12px', fontWeight: 'bold', color: 'var(--fg)' }}>{component.name}</p>
-        <p style={{ margin: 0, fontSize: '11px', color: 'var(--muted)' }}>{component.description}</p>
+        <p style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: 'var(--fg)' }}>{component.name}</p>
+        <p style={{ margin: 0, fontSize: '13px', color: 'var(--muted)' }}>{component.description}</p>
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ export function AsciiBlock({ ascii, className = '' }: AsciiBlockProps) {
           color: 'var(--bg)',
           border: 'none',
           padding: '2px 8px',
-          fontSize: '11px',
+          fontSize: '13px',
           fontFamily: 'var(--font-mono), monospace',
           cursor: 'pointer',
           borderRadius: '2px',

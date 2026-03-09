@@ -43,7 +43,7 @@ export function ComponentsClient({ components }: { components: Component[] }) {
           color: 'var(--accent-fg)',
           border: 'none',
           fontFamily: 'var(--font-mono), monospace',
-          fontSize: '12px',
+          fontSize: '13px',
           padding: '10px 16px',
           cursor: 'pointer',
           boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
@@ -93,7 +93,7 @@ export function ComponentsClient({ components }: { components: Component[] }) {
             border: 'none',
             color: 'var(--fg)',
             fontFamily: 'var(--font-mono), monospace',
-            fontSize: '12px',
+            fontSize: '13px',
             cursor: 'pointer',
           }}
         >
@@ -112,7 +112,7 @@ export function ComponentsClient({ components }: { components: Component[] }) {
               border: 'none',
               color: selectedCategory === id && !query ? 'var(--fg)' : 'var(--muted)',
               fontFamily: 'var(--font-mono), monospace',
-              fontSize: '11px',
+              fontSize: '13px',
               cursor: 'pointer',
             }}
           >
@@ -141,7 +141,7 @@ export function ComponentsClient({ components }: { components: Component[] }) {
             marginBottom: '24px',
           }}
         />
-        <div style={{ marginBottom: '12px', fontSize: '11px', color: 'var(--muted)' }}>
+        <div style={{ marginBottom: '12px', fontSize: '13px', color: 'var(--muted)' }}>
           {filtered.length} components
         </div>
         <div style={{
@@ -155,8 +155,8 @@ export function ComponentsClient({ components }: { components: Component[] }) {
                 <AsciiBlock ascii={component.ascii} />
               </Link>
               <div>
-                <p style={{ margin: 0, fontSize: '12px', fontWeight: 'bold', color: 'var(--fg)' }}>{component.name}</p>
-                <p style={{ margin: 0, fontSize: '11px', color: 'var(--muted)' }}>{component.description}</p>
+                <p style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: 'var(--fg)' }}>{component.name}</p>
+                <p style={{ margin: 0, fontSize: '13px', color: 'var(--muted)' }}>{component.description}</p>
               </div>
             </div>
           ))}

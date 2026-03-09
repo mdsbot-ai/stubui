@@ -34,8 +34,17 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--font-mono), "IBM Plex Mono", monospace;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.6;
+}
+
+/* Force 13px everywhere */
+* {
+  font-size: 13px;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, input, textarea, select, label, li, td, th, pre, code {
+  font-size: 13px !important;
 }
 
 /* ASCII block rules - CRITICAL for alignment */

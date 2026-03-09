@@ -26,7 +26,7 @@ export function HomeSearch({ components }: { components: Component[] }) {
           border: '1px solid var(--border)',
           color: 'var(--fg)',
           fontFamily: 'var(--font-mono), monospace',
-          fontSize: '14px',
+          fontSize: '13px',
           padding: '10px 12px',
           outline: 'none',
           marginBottom: '32px',
@@ -43,8 +43,8 @@ export function HomeSearch({ components }: { components: Component[] }) {
               <AsciiBlock ascii={component.ascii} />
             </Link>
             <div>
-              <p style={{ margin: 0, fontSize: '12px', fontWeight: 'bold', color: 'var(--fg)' }}>{component.name}</p>
-              <p style={{ margin: 0, fontSize: '11px', color: 'var(--muted)' }}>{component.description}</p>
+              <p style={{ margin: 0, fontSize: '13px', fontWeight: 'bold', color: 'var(--fg)' }}>{component.name}</p>
+              <p style={{ margin: 0, fontSize: '13px', color: 'var(--muted)' }}>{component.description}</p>
             </div>
           </div>
         ))}

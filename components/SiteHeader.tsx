@@ -40,7 +40,7 @@ export function SiteHeader() {
               border: '1px solid var(--border)',
               color: 'var(--fg)',
               fontFamily: 'var(--font-mono), monospace',
-              fontSize: '16px',
+              fontSize: '13px',
               padding: '4px 8px',
               cursor: 'pointer',
               lineHeight: 1,
@@ -94,17 +94,17 @@ export function SiteHeader() {
               border: 'none',
               color: 'var(--fg)',
               fontFamily: 'var(--font-mono), monospace',
-              fontSize: '16px',
+              fontSize: '13px',
               cursor: 'pointer',
             }}
           >
             ✕
           </button>
         </div>
-        <Link href="/components" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '14px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>components</Link>
-        <Link href="/layouts" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '14px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>layouts</Link>
-        <Link href="/guide" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '14px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>guide</Link>
-        <Link href="/builder" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '14px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>builder</Link>
+        <Link href="/components" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '13px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>components</Link>
+        <Link href="/layouts" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '13px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>layouts</Link>
+        <Link href="/guide" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '13px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>guide</Link>
+        <Link href="/builder" onClick={() => setMenuOpen(false)} style={{ color: 'var(--fg)', textDecoration: 'none', fontSize: '13px', padding: '8px 0', borderBottom: '1px solid var(--border)' }}>builder</Link>
       </nav>
     </>
   );

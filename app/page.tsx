@@ -20,10 +20,10 @@ export default function HomePage() {
           }}>
 {`stubui — ASCII UI component library`}
           </pre>
-          <h1 style={{ margin: '0 0 16px 0', fontSize: '28px', fontWeight: 'bold', lineHeight: 1.2 }}>
+          <h1 style={{ margin: '0 0 16px 0', fontSize: '13px', fontWeight: 'bold', lineHeight: 1.2 }}>
             Design UI in plain text.
           </h1>
-          <p style={{ margin: '0 0 8px 0', color: 'var(--muted)', fontSize: '14px', maxWidth: '560px' }}>
+          <p style={{ margin: '0 0 8px 0', color: 'var(--muted)', fontSize: '13px', maxWidth: '560px' }}>
             A shared notation language for describing UI layout in ASCII. Built for designers prompting Claude Code.
           </p>
           <pre className="ascii-block" style={{
@@ -31,7 +31,7 @@ export default function HomePage() {
             fontVariantLigatures: 'none',
             fontFeatureSettings: '"liga" 0, "calt" 0',
             color: 'var(--muted)',
-            fontSize: '12px',
+            fontSize: '13px',
             marginTop: '24px',
             whiteSpace: 'pre',
             letterSpacing: 0,
