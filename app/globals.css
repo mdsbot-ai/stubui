@@ -33,14 +33,14 @@
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-family: var(--font-mono), "IBM Plex Mono", monospace;
   font-size: 14px;
   line-height: 1.6;
 }
 
 /* ASCII block rules - CRITICAL for alignment */
 .ascii-block {
-  font-family: var(--font-mono), "JetBrains Mono", monospace;
+  font-family: var(--font-mono), "IBM Plex Mono", monospace;
   font-variant-ligatures: none;
   font-feature-settings: "liga" 0, "calt" 0;
   white-space: pre;

@@ -26,7 +26,7 @@ export function AsciiBlock({ ascii, className = '' }: AsciiBlockProps) {
       <pre
         className="ascii-block p-4 text-sm"
         style={{
-          fontFamily: 'var(--font-mono), "JetBrains Mono", monospace',
+          fontFamily: 'var(--font-mono), "IBM Plex Mono", monospace',
           fontVariantLigatures: 'none',
           fontFeatureSettings: '"liga" 0, "calt" 0',
           whiteSpace: 'pre',
