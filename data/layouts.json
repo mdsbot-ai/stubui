@@ -2,31 +2,217 @@
   {
     "name": "Dashboard",
     "slug": "dashboard",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
     "description": "Admin dashboard with sidebar, stats, and data table",
+    "prompt": "Build me a dashboard with @sidebar for navigation, @avatar in the top right, a row of @badge stat cards, and a @data-table below with @pagination at the bottom.",
     "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ sidebar ] (~ - - - - - - - - - - ~)\n[ sidebar ] | stat | stat | stat |\n[ sidebar ] (~ - - - - - - - - - - ~)\n[ sidebar ] | - - table - - - - - -|\n[ sidebar ] | - - - - - - - - - - -|"
+  },
+  {
+    "name": "Inbox / Email Client",
+    "slug": "inbox",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
+    "description": "Email client with folder nav, message list, and reading pane",
+    "prompt": "Build me an email client with @sidebar for folder navigation, a scrollable message list using @item rows with @badge for unread counts, and a @card reading pane on the right with @separator between messages.",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ sidebar ] | - - messages - - - | (~ - reading pane - ~)\n[ sidebar ] | (item) [badge]     | (~ - - - - - - - - ~)\n[ sidebar ] | (item) [badge]     | (~ - - - - - - - - ~)\n[ sidebar ] | (item)             | - - - separator - --\n[ sidebar ] | (item)             | (~ - - - - - - - - ~)"
+  },
+  {
+    "name": "Chat / Messaging",
+    "slug": "chat",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
+    "description": "Chat app with contacts list, message thread, and composer",
+    "prompt": "Build me a chat app with @sidebar for contacts list, a @scroll-area message thread with @avatar and message bubbles, and an @input with @button for sending at the bottom.",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ contacts ] (~ - - - - - - - - - - ~)\n[ contacts ] (avatar) msg bubble\n[ contacts ]          msg bubble\n[ contacts ] (avatar) msg bubble\n[ contacts ] (~ - input - - - ~) [send]"
+  },
+  {
+    "name": "Project Board",
+    "slug": "project-board",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
+    "description": "Kanban board with tabs, task columns, and cards",
+    "prompt": "Build me a kanban board with @tabs for board views, three scrollable columns using @card for task cards, each card with @badge for status and @avatar for assignee.",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ ● board  ○ list  ○ calendar  -  tabs ]\n[ - col 1 - ] [ - col 2 - ] [ - col 3 - ]\n|  [card]   | |  [card]   | |  [card]   |\n|  [card]   | |  [card]   | |  [card]   |\n|  [card]   | |           | |  [+ add]  |"
+  },
+  {
+    "name": "Analytics / Reporting",
+    "slug": "analytics",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
+    "description": "Analytics dashboard with date picker, stat cards, chart, and table",
+    "prompt": "Build me an analytics dashboard with @date-picker for date range, a row of @card stat cards, @chart area below, and @data-table with @pagination for detailed data.",
+    "ascii": "[logo] (~ - - - nav - - - ~) [date-picker]\n| stat | stat | stat | stat |\n(~ - - - - - chart - - - - - ~)\n(~ - - - - - chart - - - - - ~)\n| - - - - table - - - - - - -|\n| - - - - - - - - - - - - - -|\n(~ ~) (pagination) (~ ~)"
+  },
+  {
+    "name": "User Profile",
+    "slug": "user-profile",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
+    "description": "Profile page with avatar header, tabs, and activity feed",
+    "prompt": "Build me a user profile page with @avatar and user info at the top, @tabs for activity/settings/posts sections, a @data-table activity feed, and @button for edit profile.",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n(~ (avatar)  user name  bio  - - ~) [edit]\n[ ● activity  ○ settings  ○ posts  tabs ]\n| - - - - - - - - - - - - - - - -|\n| - - - - - - - - - - - - - - - -|\n| - - - - - - - - - - - - - - - -|"
+  },
+  {
+    "name": "Settings",
+    "slug": "settings-page",
+    "category": "saas",
+    "categoryLabel": "SaaS App Patterns",
+    "description": "Settings with sidebar nav, form fields, toggles, and save actions",
+    "prompt": "Build me a settings page with @sidebar for section nav, @input fields with @label for each setting, a @select dropdown, a @switch for toggles, and @button for save and cancel actions.",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ sidebar ] [ label ] (~ - - input - - ~)\n[ sidebar ] [ label ] (~ - - input - - ~)\n[ sidebar ] [ label ] (~ - select - - ~)\n[ sidebar ] [ label ] [● switch]\n[ sidebar ] (~ ~) [ save ] [cancel]"
   },
   {
     "name": "Landing Page",
     "slug": "landing-page",
-    "description": "Marketing landing page with hero, features, and footer",
-    "ascii": "[logo] (~ - - nav - - ~) [btn]\n(~ - - - - hero - - - - ~)\n(~ - - - - hero - - - - ~)\n| feature | feature | feature |\n(~ - - testimonials - - ~)\n(~ - - - - cta - - - - ~)\n(~ - - - footer - - - ~)"
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Marketing landing page with hero, features, testimonials, and footer",
+    "prompt": "Build me a landing page with a @navigation-menu at the top, a large hero section with a @button CTA, three @card feature columns, @carousel for testimonials, and a @separator before the footer.",
+    "ascii": "[logo] (~ - - nav - - ~) [btn]\n(~ - - - - hero - - - - ~)\n(~ - - - - hero - - - - ~)\n| feature | feature | feature |\n(~ - - - carousel - - - ~)\n(~ - - - separator - - - ~)\n(~ - - - footer - - - ~)"
   },
   {
-    "name": "Settings Page",
-    "slug": "settings-page",
-    "description": "Settings with sidebar nav and form fields",
-    "ascii": "[logo] (~ - - nav - - ~) (avatar)\n[ sidebar ] (~ - - - - - - - - ~)\n[ sidebar ] [ label ] (~ input ~)\n[ sidebar ] [ label ] (~ input ~)\n[ sidebar ] [ label ] (~ select ~)\n[ sidebar ] (~ ~) [ save ] [cancel]"
+    "name": "Documentation Site",
+    "slug": "docs",
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Docs site with sidebar nav, breadcrumb, content area, and TOC",
+    "prompt": "Build me a docs site with @sidebar for page nav, @breadcrumb at the top, a @scroll-area main content area with @typography headings, and a @table-of-contents sidebar on the right.",
+    "ascii": "[logo] (~ - - - nav - - - ~)\n[ breadcrumb - - - - - - - - - - - ]\n[ sidebar ] (~ - - content - - ~) [ toc ]\n[ sidebar ] (~ - - - - - - - ~) [ toc ]\n[ sidebar ] (~ - - - - - - - ~) [ toc ]\n[ sidebar ] (~ - - - - - - - ~) [ toc ]"
+  },
+  {
+    "name": "Portfolio / Gallery",
+    "slug": "portfolio",
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Portfolio with filterable card grid and lightbox dialog",
+    "prompt": "Build me a portfolio page with @navigation-menu, a filterable grid of @card image cards using @tabs for categories, and a @dialog lightbox for full-size preview.",
+    "ascii": "[logo] (~ - - nav - - ~)\n[ ● all  ○ web  ○ brand  ○ photo  tabs ]\n| card | card | card | card |\n| card | card | card | card |\n| card | card | card | card |\n(~ ~) [ - - - dialog - - - ] (~ ~)"
+  },
+  {
+    "name": "Pricing Page",
+    "slug": "pricing",
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Pricing tiers with toggle, plan cards, and feature comparison",
+    "prompt": "Build me a pricing page with @toggle for monthly/annual, three @card plan columns with @badge for the popular plan, feature comparison using @table, and @button CTAs.",
+    "ascii": "[logo] (~ - - nav - - ~)\n(~ ~) [ monthly ] [●] [ annual ] (~ ~)\n| [ plan ]  | [● plan ]   | [ plan ]  |\n|           | [ popular ] |           |\n| features  | features    | features  |\n| [ btn   ] | [ btn     ] | [ btn   ] |"
+  },
+  {
+    "name": "Changelog",
+    "slug": "changelog",
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Changelog with timeline, version badges, and expandable entries",
+    "prompt": "Build me a changelog page with @navigation-menu, a @timeline of releases, each with @badge for version number and @accordion for detailed changes.",
+    "ascii": "[logo] (~ - - nav - - ~)\n  ●  v2.1  [badge]  [accordion ▼]\n  │    - change detail\n  ○  v2.0  [badge]  [accordion ▼]\n  │    - change detail\n  ○  v1.9  [badge]  [accordion ▼]"
+  },
+  {
+    "name": "Newsletter Signup",
+    "slug": "newsletter",
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Newsletter signup with hero, social proof badges, and featured content",
+    "prompt": "Build me a newsletter signup page with a hero headline, social proof @badge counts, an @input for email with @button CTA, and @card for featured content below.",
+    "ascii": "[logo] (~ - - nav - - ~)\n(~ - - - - hero - - - - ~)\n(~ ~) [badge] [badge] [badge] (~ ~)\n(~ ~) (~ - email input - ~) [btn] (~ ~)\n| card | card | card |\n(~ - - - footer - - - ~)"
   },
   {
     "name": "Blog",
     "slug": "blog",
-    "description": "Blog layout with header, article grid, and sidebar",
-    "ascii": "[logo] (~ - - nav - - ~)\n(~ - - - hero - - - ~)\n(~ - - - - - - - - - - - - - - - - ~)\n(~ article ~)(~ article ~)[ sidebar ]\n(~ article ~)(~ article ~)[ sidebar ]\n(~ - - - footer - - - ~)"
+    "category": "marketing",
+    "categoryLabel": "Marketing / Content",
+    "description": "Blog layout with header, article grid, sidebar, and pagination",
+    "prompt": "Build me a blog layout with a @navigation-menu header, a hero area, a grid of @card article cards, a @sidebar for categories and tags, and @pagination at the bottom.",
+    "ascii": "[logo] (~ - - nav - - ~)\n(~ - - - hero - - - ~)\n(~ article ~)(~ article ~)[ sidebar ]\n(~ article ~)(~ article ~)[ sidebar ]\n(~ article ~)(~ article ~)[ sidebar ]\n(~ ~) (pagination) (~ ~)"
+  },
+  {
+    "name": "Login / Signup",
+    "slug": "login",
+    "category": "auth",
+    "categoryLabel": "Auth / Onboarding",
+    "description": "Centered login form with social login options",
+    "prompt": "Build me a centered login form with a logo at top, @input for email and password, @checkbox for remember me, @button for submit, @separator with or text, and social login @button row.",
+    "ascii": "(~ ~) [ - - - - - - - - - - ] (~ ~)\n(~ ~) | (logo)               | (~ ~)\n(~ ~) | [~ - - - email - - ~] | (~ ~)\n(~ ~) | [~ - - password - ~]  | (~ ~)\n(~ ~) | [✓] remember me       | (~ ~)\n(~ ~) | [~ - - - login - - ~] | (~ ~)\n(~ ~) | - - - - or - - - - -  | (~ ~)\n(~ ~) | [google]  [github]    | (~ ~)"
+  },
+  {
+    "name": "Onboarding Wizard",
+    "slug": "onboarding",
+    "category": "auth",
+    "categoryLabel": "Auth / Onboarding",
+    "description": "Multi-step onboarding flow with progress, form fields, and nav buttons",
+    "prompt": "Build me an onboarding flow with @progress stepper at the top showing 4 steps, @input and @select form fields in the center, and @button for back and next at the bottom.",
+    "ascii": "(~ ~) (●)───(●)───(○)───( ) (~ ~)\n(~ ~)                         (~ ~)\n(~ ~) [ label ] (~ - input ~) (~ ~)\n(~ ~) [ label ] (~ select ~)  (~ ~)\n(~ ~)                         (~ ~)\n(~ ~) [ back ]     [ next → ] (~ ~)"
+  },
+  {
+    "name": "Password Reset",
+    "slug": "password-reset",
+    "category": "auth",
+    "categoryLabel": "Auth / Onboarding",
+    "description": "Password reset flow with email input and confirmation alert",
+    "prompt": "Build me a password reset flow with a centered @card, @input for email, @button to submit, and a confirmation state with @alert success message.",
+    "ascii": "(~ ~) [ - - - - - - - - - - ] (~ ~)\n(~ ~) | Reset Password       | (~ ~)\n(~ ~) | [~ - - - email - - ~] | (~ ~)\n(~ ~) | [~ - - - send  - - ~] | (~ ~)\n(~ ~) |                       | (~ ~)\n(~ ~) | [✓ alert: email sent] | (~ ~)"
+  },
+  {
+    "name": "CRM / Contact Detail",
+    "slug": "crm",
+    "category": "data",
+    "categoryLabel": "Data Heavy",
+    "description": "CRM contact page with sidebar, tabs, and activity timeline",
+    "prompt": "Build me a CRM contact page with @sidebar for contact list, @avatar and contact info header, @tabs for details/activity/notes, @timeline for activity history, and @button for actions.",
+    "ascii": "[logo] (~ - - - nav - - - ~) (avatar)\n[ contacts ] (avatar) Contact Name [btn]\n[ contacts ] [ ● detail  ○ activity  ○ notes ]\n[ contacts ]   ●  Event title  [timeline]\n[ contacts ]   │  note text\n[ contacts ]   ○  Event title"
   },
   {
     "name": "E-Commerce",
     "slug": "ecommerce",
-    "description": "Product listing with filters sidebar and grid",
-    "ascii": "[logo] (~ search - - - - - ~) [cart]\n[ filters ] (~ - - - - - - - - - - ~)\n[ filters ] | prod | prod | prod |\n[ filters ] | prod | prod | prod |\n[ filters ] (pagination)\n(~ - - - footer - - - ~)"
+    "category": "data",
+    "categoryLabel": "Data Heavy",
+    "description": "Product listing with filter sidebar, product grid, and pagination",
+    "prompt": "Build me an e-commerce product listing with a @navigation-menu and search @input at the top, @accordion filter sidebar on the left, a grid of @card product cards, and @pagination.",
+    "ascii": "[logo] (~ - - search - - ~) [cart]\n[ accordion ] | prod | prod | prod |\n[ filters   ] | prod | prod | prod |\n[ filters   ] | prod | prod | prod |\n[ filters   ] (~ ~) (pagination)\n(~ - - - footer - - - ~)"
+  },
+  {
+    "name": "File Manager",
+    "slug": "file-manager",
+    "category": "data",
+    "categoryLabel": "Data Heavy",
+    "description": "File manager with breadcrumb nav, view toggle, and context menu",
+    "prompt": "Build me a file manager with @breadcrumb for path navigation, @toggle-group for grid/list view, a @data-table or grid of @card file items, and @context-menu for right-click actions.",
+    "ascii": "[logo] (~ - - - nav - - - ~)\n[ breadcrumb - - - - - - ] [● grid  ○ list]\n[ - folder - ] [ - folder - ] [ - file - ]\n[ - folder - ] [ - file  - ] [ - file - ]\n[ - file  - ] [ - file  - ] [ - file - ]\n(~ ~) [ context-menu ▼ ] (~ ~)"
+  },
+  {
+    "name": "Calendar View",
+    "slug": "calendar",
+    "category": "data",
+    "categoryLabel": "Data Heavy",
+    "description": "Calendar with month grid, event indicators, and side panel",
+    "prompt": "Build me a calendar page with @navigation-menu, a month grid @table with event @badge indicators, a @sheet side panel for event details, and @button for creating new events.",
+    "ascii": "[logo] (~ - - - nav - - - ~) [+ new]\n[ < March 2026 >  - - - - - - - ]\n| Mon | Tue | Wed | Thu | Fri |\n|  2  |  3  |  4● |  5  |  6  |\n|  9  |  10 |  11 |  12 |  13 |\n| 16  |  17 |  18 |  19 |  20 |"
+  },
+  {
+    "name": "Data Explorer",
+    "slug": "data-explorer",
+    "category": "data",
+    "categoryLabel": "Data Heavy",
+    "description": "Data explorer with search, filters, sortable table, and export",
+    "prompt": "Build me a data explorer with @input search bar, @select and @checkbox filter controls, @data-table with sortable columns, @pagination, and @button for export.",
+    "ascii": "[logo] (~ - - - nav - - - ~)\n(~ - search - ~) [select ▼] [✓ filter] [export]\n| col ↑  | col    | col    | col   |\n|--------|--------|--------|-------|\n| data   | data   | data   | data  |\n| data   | data   | data   | data  |\n(~ ~) (pagination) (~ ~)"
+  },
+  {
+    "name": "Mobile App Shell",
+    "slug": "mobile-shell",
+    "category": "mobile",
+    "categoryLabel": "Mobile First",
+    "description": "Mobile shell with sticky header, scroll area, and bottom tab bar",
+    "prompt": "Build me a mobile app shell with a sticky header @navigation-menu, scrollable @scroll-area content area, and a bottom @tabs navigation bar with icons.",
+    "ascii": "(~ ~) [ - - - - - - - - - ] (~ ~)\n(~ ~) [logo]   (~ ~)  [menu] (~ ~)\n(~ ~) - - - - content - - -  (~ ~)\n(~ ~) - - - - - - - - - - -  (~ ~)\n(~ ~) - - - - - - - - - - -  (~ ~)\n(~ ~) [home][feed][notif][me] (~ ~)"
+  },
+  {
+    "name": "Mobile Feed",
+    "slug": "mobile-feed",
+    "category": "mobile",
+    "categoryLabel": "Mobile First",
+    "description": "Mobile feed with cards, avatar author info, and floating action button",
+    "prompt": "Build me a mobile feed with a top @navigation-menu, scrollable @card content cards with @avatar author info, @button for floating action, and pull-to-refresh @spinner.",
+    "ascii": "(~ ~) [ - - - - - - - - - ] (~ ~)\n(~ ~) [logo]   (~ ~)  [menu] (~ ~)\n(~ ~) (avatar) name  [badge] (~ ~)\n(~ ~) - - - - content - - -  (~ ~)\n(~ ~) (avatar) name  [badge] (~ ~)\n(~ ~) - - - - content - - -  (~ ~)\n(~ ~)               [+ btn]  (~ ~)"
   }
 ]

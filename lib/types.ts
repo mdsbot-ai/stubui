@@ -11,7 +11,10 @@ export interface Component {
 export interface Layout {
   name: string;
   slug: string;
+  category: string;
+  categoryLabel: string;
   description: string;
+  prompt: string;
   ascii: string;
 }
 

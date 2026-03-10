@@ -20,6 +20,7 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
   const [text, setText] = useState('');
   const [mentions, setMentions] = useState<Component[]>([]);
   const [templateOpen, setTemplateOpen] = useState(false);
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
   const handleChange = useCallback((newText: string, newMentions: Component[]) => {
     setText(newText);
@@ -30,32 +31,33 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
     promptInputRef.current?.insertMention(slug);
   }, []);
 
-  // Map layout templates to @mention-based prompts
-  const TEMPLATE_PROMPTS: Record<string, string> = {
-    dashboard:
-      'Build me a dashboard layout with @sidebar for navigation, @avatar in the top right, a row of @badge stat cards, and a @data-table below with @pagination at the bottom.',
-    'landing-page':
-      'Build me a landing page with a @navigation-menu at the top, a large hero section with a @button CTA, three @card feature columns, and a @separator before the footer.',
-    'settings-page':
-      'Build me a settings page with a @sidebar for section nav, @input fields with @label for each setting, a @select dropdown, and @button for save and cancel actions.',
-    blog:
-      'Build me a blog layout with a @navigation-menu header, a hero area, a grid of @card article cards, a @sidebar for categories and tags, and @pagination at the bottom.',
-    ecommerce:
-      'Build me an e-commerce product listing with a @navigation-menu and search @input at the top, @accordion filter sidebar on the left, a grid of @card product cards, and @pagination.',
-  };
-
-  const handleTemplateSelect = useCallback(
-    (layout: Layout) => {
-      const prompt = TEMPLATE_PROMPTS[layout.slug] || `Build me a ${layout.name.toLowerCase()} layout.`;
-      promptInputRef.current?.setContent(prompt);
-      setTemplateOpen(false);
-    },
-    []
-  );
+  const handleTemplateSelect = useCallback((layout: Layout) => {
+    promptInputRef.current?.setContent(layout.prompt);
+    setTemplateOpen(false);
+    setExpandedCategory(null);
+  }, []);
 
   const handleExampleClick = useCallback(() => {
     promptInputRef.current?.setContent(EXAMPLE_PROMPT);
   }, []);
+
+  const handleCategoryClick = useCallback((category: string) => {
+    setExpandedCategory((prev) => (prev === category ? null : category));
+  }, []);
+
+  // Group layouts by category
+  const categories = layouts.reduce<{ id: string; label: string; items: Layout[] }[]>(
+    (acc, layout) => {
+      const existing = acc.find((g) => g.id === layout.category);
+      if (existing) {
+        existing.items.push(layout);
+      } else {
+        acc.push({ id: layout.category, label: layout.categoryLabel, items: [layout] });
+      }
+      return acc;
+    },
+    []
+  );
 
   const generatedPrompt = buildPrompt(text, mentions);
   const isEmpty = !text.trim() && mentions.length === 0;
@@ -91,14 +93,18 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
           {/* Template selector */}
           <div style={{ marginBottom: '12px', position: 'relative' }}>
             <button
-              onClick={() => setTemplateOpen((o) => !o)}
+              onClick={() => {
+                setTemplateOpen((o) => !o);
+                setExpandedCategory(null);
+              }}
               style={{
                 background: 'none',
                 border: '1px solid var(--border)',
                 padding: '4px 12px',
                 borderRadius: '2px',
-                fontFamily: 'var(--font-mono), "IBM Plex Mono", monospace',
+                fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
                 fontSize: '13px',
+                fontWeight: 400,
                 color: 'var(--muted)',
                 cursor: 'pointer',
               }}
@@ -117,29 +123,86 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
                   border: '1px solid var(--border)',
                   borderRadius: '4px',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
-                  minWidth: '240px',
+                  minWidth: '280px',
+                  maxWidth: '360px',
+                  overflow: 'hidden',
                 }}
               >
-                {layouts.map((layout) => (
-                  <div
-                    key={layout.slug}
-                    onClick={() => handleTemplateSelect(layout)}
-                    style={{
-                      padding: '10px 16px',
-                      cursor: 'pointer',
-                      borderBottom: '1px solid var(--border)',
-                    }}
-                    onMouseEnter={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.background = 'var(--bg)';
-                    }}
-                    onMouseLeave={(e) => {
-                      (e.currentTarget as HTMLDivElement).style.background = 'transparent';
-                    }}
-                  >
-                    <div style={{ marginBottom: '2px' }}>{layout.name}</div>
-                    <div style={{ color: 'var(--muted)', fontSize: '11px' }}>
-                      {layout.description}
-                    </div>
+                {categories.map((group, idx) => (
+                  <div key={group.id}>
+                    {/* Category header */}
+                    <button
+                      onClick={() => handleCategoryClick(group.id)}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        width: '100%',
+                        padding: '8px 14px',
+                        background: 'none',
+                        border: 'none',
+                        borderBottom:
+                          idx < categories.length - 1 || expandedCategory === group.id
+                            ? '1px solid var(--border)'
+                            : 'none',
+                        cursor: 'pointer',
+                        fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
+                        fontSize: '13px',
+                        fontWeight: 400,
+                        color: 'var(--fg)',
+                        textAlign: 'left',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.background = 'var(--bg)';
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.background = 'none';
+                      }}
+                    >
+                      <span>{group.label}</span>
+                      <span style={{ color: 'var(--muted)', fontSize: '11px', marginLeft: '8px' }}>
+                        {expandedCategory === group.id ? '↑' : '↓'}
+                      </span>
+                    </button>
+
+                    {/* Template items */}
+                    {expandedCategory === group.id &&
+                      group.items.map((layout, itemIdx) => (
+                        <button
+                          key={layout.slug}
+                          onClick={() => handleTemplateSelect(layout)}
+                          style={{
+                            display: 'block',
+                            width: '100%',
+                            padding: '9px 14px 9px 24px',
+                            background: 'none',
+                            border: 'none',
+                            borderBottom:
+                              itemIdx < group.items.length - 1
+                                ? '1px solid var(--border)'
+                                : '1px solid var(--border)',
+                            cursor: 'pointer',
+                            fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
+                            fontSize: '13px',
+                            fontWeight: 400,
+                            color: 'var(--fg)',
+                            textAlign: 'left',
+                          }}
+                          onMouseEnter={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.background = 'var(--bg)';
+                          }}
+                          onMouseLeave={(e) => {
+                            (e.currentTarget as HTMLButtonElement).style.background = 'none';
+                          }}
+                        >
+                          <div style={{ marginBottom: '2px' }}>{layout.name}</div>
+                          <div style={{ color: 'var(--muted)', fontSize: '11px' }}>
+                            {layout.description}
+                          </div>
+                        </button>
+                      ))}
                   </div>
                 ))}
               </div>
@@ -184,7 +247,7 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
                     color: 'var(--fg)',
                     cursor: 'pointer',
                     textDecoration: 'underline',
-                    fontFamily: 'var(--font-mono), "IBM Plex Mono", monospace',
+                    fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
                     fontSize: '13px',
                   }}
                 >
