@@ -1,9 +1,11 @@
 import componentsData from '@/data/components.json';
 import layoutsData from '@/data/layouts.json';
-import type { Component, Layout } from './types';
+import stylesData from '@/data/styles.json';
+import type { Component, Layout, Style } from './types';
 
 export const components: Component[] = componentsData as Component[];
 export const layouts: Layout[] = layoutsData as Layout[];
+export const styles: Style[] = stylesData as Style[];
 
 export const CATEGORIES: Record<string, string> = {
   'layout': 'Layout',

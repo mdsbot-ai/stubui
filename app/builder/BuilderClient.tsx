@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useRef, useState } from 'react';
-import type { Component, Layout } from '@/lib/types';
+import type { Component, Layout, Style } from '@/lib/types';
 import { buildPrompt } from '@/lib/prompt';
 import { PromptInput, type PromptInputHandle } from '@/components/PromptInput';
 import { QuickAddBar } from '@/components/QuickAddBar';
@@ -10,17 +10,21 @@ import { PromptOutput } from '@/components/PromptOutput';
 interface BuilderClientProps {
   components: Component[];
   layouts: Layout[];
+  styles: Style[];
 }
 
 const EXAMPLE_PROMPT =
   'Build me a dashboard with @sidebar, @data-table, and @pagination. The sidebar should have nav links. The main area shows a data table with filters above it.';
 
-export function BuilderClient({ components, layouts }: BuilderClientProps) {
+export function BuilderClient({ components, layouts, styles }: BuilderClientProps) {
   const promptInputRef = useRef<PromptInputHandle>(null);
   const [text, setText] = useState('');
   const [mentions, setMentions] = useState<Component[]>([]);
   const [templateOpen, setTemplateOpen] = useState(false);
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+  const [styleOpen, setStyleOpen] = useState(false);
+  const [expandedStyleCategory, setExpandedStyleCategory] = useState<string | null>(null);
+  const [selectedStyle, setSelectedStyle] = useState<Style | null>(null);
 
   const handleChange = useCallback((newText: string, newMentions: Component[]) => {
     setText(newText);
@@ -45,6 +49,14 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
     setExpandedCategory((prev) => (prev === category ? null : category));
   }, []);
 
+  const handleStyleCategoryClick = useCallback((category: string) => {
+    setExpandedStyleCategory((prev) => (prev === category ? null : category));
+  }, []);
+
+  const handleStyleSelect = useCallback((style: Style) => {
+    setSelectedStyle((prev) => (prev?.slug === style.slug ? null : style));
+  }, []);
+
   // Group layouts by category
   const categories = layouts.reduce<{ id: string; label: string; items: Layout[] }[]>(
     (acc, layout) => {
@@ -59,7 +71,21 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
     []
   );
 
-  const generatedPrompt = buildPrompt(text, mentions);
+  // Group styles by category
+  const styleCategories = styles.reduce<{ id: string; label: string; items: Style[] }[]>(
+    (acc, style) => {
+      const existing = acc.find((g) => g.id === style.category);
+      if (existing) {
+        existing.items.push(style);
+      } else {
+        acc.push({ id: style.category, label: style.categoryLabel, items: [style] });
+      }
+      return acc;
+    },
+    []
+  );
+
+  const generatedPrompt = buildPrompt(text, mentions, selectedStyle);
   const isEmpty = !text.trim() && mentions.length === 0;
 
   return (
@@ -203,6 +229,137 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
                           </div>
                         </button>
                       ))}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Style Direction selector */}
+          <div style={{ marginBottom: '12px', position: 'relative' }}>
+            <button
+              onClick={() => {
+                setStyleOpen((o) => !o);
+                setExpandedStyleCategory(null);
+              }}
+              style={{
+                background: 'none',
+                border: '1px solid var(--border)',
+                padding: '4px 12px',
+                borderRadius: '2px',
+                fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
+                fontSize: '13px',
+                fontWeight: 400,
+                color: selectedStyle ? 'var(--fg)' : 'var(--muted)',
+                cursor: 'pointer',
+              }}
+            >
+              STYLE DIRECTION {selectedStyle ? `— ${selectedStyle.name}` : ''}{styleOpen ? ' ↑' : ' ↓'}
+            </button>
+
+            {styleOpen && (
+              <div
+                style={{
+                  position: 'absolute',
+                  top: 'calc(100% + 4px)',
+                  left: 0,
+                  zIndex: 40,
+                  background: 'var(--card-bg)',
+                  border: '1px solid var(--border)',
+                  borderRadius: '4px',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.12)',
+                  minWidth: '280px',
+                  maxWidth: '380px',
+                  overflow: 'hidden',
+                }}
+              >
+                {styleCategories.map((group, idx) => (
+                  <div key={group.id}>
+                    {/* Category header */}
+                    <button
+                      onClick={() => handleStyleCategoryClick(group.id)}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        width: '100%',
+                        padding: '8px 14px',
+                        background: 'none',
+                        border: 'none',
+                        borderBottom:
+                          idx < styleCategories.length - 1 || expandedStyleCategory === group.id
+                            ? '1px solid var(--border)'
+                            : 'none',
+                        cursor: 'pointer',
+                        fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
+                        fontSize: '13px',
+                        fontWeight: 400,
+                        color: 'var(--fg)',
+                        textAlign: 'left',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.background = 'var(--bg)';
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLButtonElement).style.background = 'none';
+                      }}
+                    >
+                      <span>{group.label}</span>
+                      <span style={{ color: 'var(--muted)', fontSize: '11px', marginLeft: '8px' }}>
+                        {expandedStyleCategory === group.id ? '↑' : '↓'}
+                      </span>
+                    </button>
+
+                    {/* Style items */}
+                    {expandedStyleCategory === group.id &&
+                      group.items.map((style) => {
+                        const isSelected = selectedStyle?.slug === style.slug;
+                        return (
+                          <button
+                            key={style.slug}
+                            onClick={() => handleStyleSelect(style)}
+                            style={{
+                              display: 'block',
+                              width: '100%',
+                              padding: '9px 14px 9px 24px',
+                              background: isSelected ? 'var(--accent-subtle, rgba(99,102,241,0.08))' : 'none',
+                              border: 'none',
+                              borderBottom: '1px solid var(--border)',
+                              cursor: 'pointer',
+                              fontFamily: '"IBM Plex Mono", var(--font-mono), monospace',
+                              fontSize: '13px',
+                              fontWeight: 400,
+                              color: 'var(--fg)',
+                              textAlign: 'left',
+                            }}
+                            onMouseEnter={(e) => {
+                              if (!isSelected) {
+                                (e.currentTarget as HTMLButtonElement).style.background = 'var(--bg)';
+                              }
+                            }}
+                            onMouseLeave={(e) => {
+                              (e.currentTarget as HTMLButtonElement).style.background = isSelected
+                                ? 'var(--accent-subtle, rgba(99,102,241,0.08))'
+                                : 'none';
+                            }}
+                          >
+                            <div
+                              style={{
+                                marginBottom: '2px',
+                                color: isSelected ? 'var(--accent, #6366f1)' : 'var(--fg)',
+                                fontWeight: isSelected ? 500 : 400,
+                              }}
+                            >
+                              {isSelected ? '✓ ' : ''}{style.name}
+                            </div>
+                            <div style={{ color: 'var(--muted)', fontSize: '11px' }}>
+                              {style.description}
+                            </div>
+                          </button>
+                        );
+                      })}
                   </div>
                 ))}
               </div>

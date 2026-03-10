@@ -1,10 +1,14 @@
-import type { Component } from './types';
+import type { Component, Style } from './types';
 
 const NOTATION_KEY = `(~ fill ~)   stretches to fill available space
 [ fixed ]    explicit/fixed width
 ( hug )      shrinks to fit content`;
 
-export function buildPrompt(text: string, mentionedComponents: Component[]): string {
+export function buildPrompt(
+  text: string,
+  mentionedComponents: Component[],
+  style?: Style | null
+): string {
   if (!text.trim() && mentionedComponents.length === 0) return '';
 
   const lines: string[] = [];
@@ -26,6 +30,19 @@ export function buildPrompt(text: string, mentionedComponents: Component[]): str
       lines.push('');
       lines.push(c.description);
     }
+  }
+
+  if (style) {
+    lines.push('');
+    lines.push('');
+    lines.push('## STYLE');
+    lines.push('');
+    lines.push(style.style);
+    lines.push('');
+    lines.push('');
+    lines.push('## AVOID');
+    lines.push('');
+    lines.push(style.avoid);
   }
 
   lines.push('');

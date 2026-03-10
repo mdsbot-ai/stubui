@@ -23,3 +23,13 @@ export type Category = {
   label: string;
   count: number;
 };
+
+export interface Style {
+  name: string;
+  slug: string;
+  category: string;
+  categoryLabel: string;
+  description: string;
+  style: string;
+  avoid: string;
+}
