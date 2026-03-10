@@ -1,12 +1,13 @@
 import { SiteHeader } from '@/components/SiteHeader';
+import { BuilderClient } from './BuilderClient';
+import { components, layouts } from '@/lib/data';
 
 export default function BuilderPage() {
   return (
     <div style={{ minHeight: '100vh' }}>
       <SiteHeader />
-      <main style={{ maxWidth: '900px', margin: '0 auto', padding: '48px 24px' }}>
-        <h1 style={{ margin: '0 0 8px', fontSize: '13px', fontWeight: '400' }}>Prompt Builder</h1>
-        <p style={{ color: 'var(--muted)', fontSize: '13px' }}>Coming in Phase 2 — @mention components to compose copy-ready prompts.</p>
+      <main>
+        <BuilderClient components={components} layouts={layouts} />
       </main>
     </div>
   );
