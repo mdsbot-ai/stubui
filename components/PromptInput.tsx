@@ -270,8 +270,52 @@ export const PromptInput = forwardRef<PromptInputHandle, PromptInputProps>(
 
         setContent(text: string) {
           if (!editorRef.current) return;
-          // Set as plain text (preserves newlines via innerText)
-          editorRef.current.innerText = text;
+          // Clear editor
+          editorRef.current.innerHTML = '';
+
+          // Parse text for @slug patterns and convert to chips
+          const parts = text.split(/(@[\w-]+)/g);
+          for (const part of parts) {
+            const mentionMatch = part.match(/^@([\w-]+)$/);
+            if (mentionMatch) {
+              const slug = mentionMatch[1];
+              const component = components.find((c) => c.slug === slug);
+              if (component) {
+                // Create chip
+                const chip = document.createElement('span');
+                chip.dataset.slug = component.slug;
+                chip.contentEditable = 'false';
+                chip.textContent = `@${component.name}`;
+                chip.style.cssText = [
+                  'display:inline-block',
+                  'background:var(--accent)',
+                  'color:var(--accent-fg)',
+                  'padding:1px 6px',
+                  'border-radius:2px',
+                  'margin:0 2px',
+                  'cursor:default',
+                  'user-select:none',
+                  'white-space:nowrap',
+                  'font-family:var(--font-mono),"IBM Plex Mono",monospace',
+                ].join(';');
+                editorRef.current.appendChild(chip);
+                // Add space after chip
+                editorRef.current.appendChild(document.createTextNode('\u00a0'));
+                continue;
+              }
+            }
+            // Plain text (preserve newlines)
+            const lines = part.split('\n');
+            for (let i = 0; i < lines.length; i++) {
+              if (i > 0) {
+                editorRef.current.appendChild(document.createElement('br'));
+              }
+              if (lines[i]) {
+                editorRef.current.appendChild(document.createTextNode(lines[i]));
+              }
+            }
+          }
+
           // Move cursor to end
           const range = document.createRange();
           range.selectNodeContents(editorRef.current);

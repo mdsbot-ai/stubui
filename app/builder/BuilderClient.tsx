@@ -30,10 +30,24 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
     promptInputRef.current?.insertMention(slug);
   }, []);
 
+  // Map layout templates to @mention-based prompts
+  const TEMPLATE_PROMPTS: Record<string, string> = {
+    dashboard:
+      'Build me a dashboard layout with @sidebar for navigation, @avatar in the top right, a row of @badge stat cards, and a @data-table below with @pagination at the bottom.',
+    'landing-page':
+      'Build me a landing page with a @navigation-menu at the top, a large hero section with a @button CTA, three @card feature columns, and a @separator before the footer.',
+    'settings-page':
+      'Build me a settings page with a @sidebar for section nav, @input fields with @label for each setting, a @select dropdown, and @button for save and cancel actions.',
+    blog:
+      'Build me a blog layout with a @navigation-menu header, a hero area, a grid of @card article cards, a @sidebar for categories and tags, and @pagination at the bottom.',
+    ecommerce:
+      'Build me an e-commerce product listing with a @navigation-menu and search @input at the top, @accordion filter sidebar on the left, a grid of @card product cards, and @pagination.',
+  };
+
   const handleTemplateSelect = useCallback(
     (layout: Layout) => {
-      const starterText = `Build me a ${layout.name.toLowerCase()} layout:\n\n${layout.ascii}`;
-      promptInputRef.current?.setContent(starterText);
+      const prompt = TEMPLATE_PROMPTS[layout.slug] || `Build me a ${layout.name.toLowerCase()} layout.`;
+      promptInputRef.current?.setContent(prompt);
       setTemplateOpen(false);
     },
     []
@@ -89,7 +103,7 @@ export function BuilderClient({ components, layouts }: BuilderClientProps) {
                 cursor: 'pointer',
               }}
             >
-              START FROM TEMPLATE {templateOpen ? '▲' : '▼'}
+              START FROM TEMPLATE {templateOpen ? '↑' : '↓'}
             </button>
 
             {templateOpen && (
