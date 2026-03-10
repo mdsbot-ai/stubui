@@ -1,0 +1,281 @@
+[
+  {
+    "name": "Clean",
+    "slug": "clean",
+    "category": "minimal",
+    "categoryLabel": "Minimal",
+    "description": "Swiss, grid-based, invisible design",
+    "style": "Grid-based layout with mathematical spacing derived from a baseline unit. Typography is a single geometric sans-serif, two weights maximum, hierarchy achieved through size and color alone. Color palette is neutral with one functional accent used exclusively for interactive elements. No decorative borders, no shadows deeper than 1px, no gradients. Alignment is absolute, every element snaps to the grid. Generous whitespace between sections, tight spacing within related groups. Icons are outline-style, single stroke weight, optically aligned. Buttons are minimal, a text link or a subtle filled rectangle, never both styles on the same surface. The interface should feel like it was designed by removing things until only the essential remains. Every pixel is intentional. Nothing decorates, everything communicates.",
+    "avoid": "No drop shadows. No gradients. No rounded corners beyond 4px. No decorative illustrations. No more than one accent color. No background colors on containers, use spacing to group instead. No icon-only buttons without labels. No border radius mixing, pick one value and use it everywhere."
+  },
+  {
+    "name": "Zen",
+    "slug": "zen",
+    "category": "minimal",
+    "categoryLabel": "Minimal",
+    "description": "Extreme whitespace, near-empty, meditative",
+    "style": "Extreme negative space is the primary design element. Content occupies no more than 40% of any given viewport. Typography is a single lightweight sans-serif or refined serif, one size for body, one for headings, nothing else. Color is almost absent, black text on white or near-white, with a single muted accent that appears sparingly. Interactions are subtle, elements fade in rather than slide. Padding is generous to the point of feeling luxurious. Navigation is minimal, almost hidden, revealed through interaction. No visual clutter whatsoever. The interface breathes. Every element has room around it. Content is centered or left-aligned with massive margins. The feeling is a quiet room with one beautiful object in it.",
+    "avoid": "No dense layouts. No sidebars. No multi-column grids with more than two columns. No bold or heavy font weights. No saturated colors. No borders between sections, use space instead. No hover animations that add visual weight. No badges, tags, or notification dots. No background patterns or textures."
+  },
+  {
+    "name": "Stark",
+    "slug": "stark",
+    "category": "minimal",
+    "categoryLabel": "Minimal",
+    "description": "Black and white, no color, typographic only",
+    "style": "Strictly monochromatic. Black, white, and the grays between them, nothing else. Typography does all the work, a strong typeface with distinct weights used to create hierarchy. Headlines can be oversized and bold, body text is readable and well-spaced. Layout is structured with clear sections defined by typography scale changes rather than containers or lines. Links are underlined, buttons are outlined or solid black. All information hierarchy comes from type size, weight, and positioning. Photography if present is black and white. The aesthetic is a well-designed book or newspaper, where typographic craft carries the entire experience. No color means every decision about weight, size, and space matters exponentially more.",
+    "avoid": "No color whatsoever, not even muted tones. No colored backgrounds. No gradients. No illustrations unless black and white line art. No rounded UI elements. No shadows with color tint. No emoji or colored icons. If icons exist they are solid black or stroked black."
+  },
+  {
+    "name": "Cozy",
+    "slug": "cozy",
+    "category": "warm",
+    "categoryLabel": "Warm / Organic",
+    "description": "Rounded, warm tones, soft shadows, inviting",
+    "style": "Warm color palette built from cream, soft amber, terracotta, warm gray, and muted sage. Typography is a rounded sans-serif or friendly geometric, medium weight default, nothing sharp or angular. Corners are generously rounded, 12-16px radius on cards, 8px on buttons, pill-shaped tags. Shadows are soft and warm-tinted, large blur radius, low opacity, giving elements a gentle lift off the surface. Spacing is comfortable, nothing feels cramped. Backgrounds layer warm neutrals, cream over off-white, with subtle warmth in every gray. Interactive states use gentle transitions, 200ms ease. The interface feels like a well-lit living room, everything is approachable, nothing is intimidating. Borders are soft or absent, separation comes from subtle background shifts and shadow.",
+    "avoid": "No sharp corners. No pure black text, use warm dark brown or charcoal. No pure white backgrounds, always a touch of warmth. No cold blues or sterile grays. No thin hairline borders. No harsh drop shadows. No angular or condensed typefaces. No high-contrast hover states."
+  },
+  {
+    "name": "Earthy",
+    "slug": "earthy",
+    "category": "warm",
+    "categoryLabel": "Warm / Organic",
+    "description": "Natural palette, textures, organic shapes",
+    "style": "Color palette drawn from nature: forest green, clay, sand, stone gray, deep brown, dried sage. Typography mixes a serif for headings with a clean sans for body, evoking print and craft. Shapes lean organic, not perfectly geometric, subtle asymmetry is welcome. Backgrounds can have very subtle texture, like paper grain or linen, at low opacity. Buttons are solid with earth tones, not neon or electric. Cards have thin borders in warm neutrals rather than shadows. Spacing is relaxed and natural, not mathematically rigid. The overall feeling is a farmers market brand or a ceramics studio website. Grounded, tactile, honest. Nothing synthetic or digital-feeling.",
+    "avoid": "No neon or electric colors. No glossy effects. No perfect geometric patterns. No glass or blur effects. No thin light-weight type. No sterile white backgrounds. No tech-startup aesthetics. No pixel-perfect rigidity, allow slight organic variation in spacing."
+  },
+  {
+    "name": "Handmade",
+    "slug": "handmade",
+    "category": "warm",
+    "categoryLabel": "Warm / Organic",
+    "description": "Imperfect, hand-drawn touches, craft feel",
+    "style": "Typography includes at least one hand-drawn or script-adjacent font for accent text, paired with a readable sans for body. Borders and separators can be slightly irregular, as if drawn by hand. Illustrations or icons lean sketchy and imperfect rather than polished vector. Color palette is warm and slightly muted, like colored pencils or watercolors. Backgrounds can include subtle paper or canvas textures. Buttons and interactive elements have a handcrafted quality, perhaps slightly uneven borders or stamp-like fills. Spacing is comfortable but not rigid. The interface should feel like it was made by a person, not a system. Individual, warm, with visible human touch in every element.",
+    "avoid": "No perfectly geometric shapes. No pixel-precise alignment obsession. No sterile minimal aesthetic. No stock photography. No gradients that look digital. No system fonts. No cold color temperatures. No corporate polish."
+  },
+  {
+    "name": "Vintage",
+    "slug": "vintage",
+    "category": "warm",
+    "categoryLabel": "Warm / Organic",
+    "description": "Aged palette, serif typography, nostalgic",
+    "style": "Serif typography dominates, a classic or transitional serif for headings with generous letter-spacing, a clean serif or readable sans for body. Color palette is desaturated and warm: faded gold, dusty rose, aged paper cream, deep burgundy, olive. Backgrounds lean warm off-white or parchment. Borders are thin and muted. Decorative elements are restrained but period-appropriate: thin rules, small ornamental dividers, subtle flourishes. Photography has a warm matte treatment, slightly desaturated. Layout is structured with clear columns, reminiscent of print design. Buttons are understated, outlined or with solid muted fills. The feeling is a well-preserved bookshop or a letterpress print. Timeless, considered, with quiet authority.",
+    "avoid": "No bright saturated colors. No rounded pill shapes. No modern geometric sans. No glass or blur effects. No neon accents. No large border radius. No animations beyond subtle fades. No contemporary startup aesthetic."
+  },
+  {
+    "name": "Brutalist",
+    "slug": "brutalist",
+    "category": "bold",
+    "categoryLabel": "Bold / Expressive",
+    "description": "Raw, exposed, monospace, thick borders, no polish",
+    "style": "Monospace or heavy grotesque typography. Borders are thick, 2-4px, always solid black or near-black. Zero border radius on everything, all corners sharp. No shadows, no gradients, no blur. Color is either black and white with one raw accent, or a limited palette of unrefined, almost clashing colors used boldly. Layout can break conventional grid, elements can overlap or sit uncomfortably close. Backgrounds are flat solid colors. Buttons are heavy bordered rectangles with uppercase text. The interface exposes its structure, nothing is hidden or polished away. Raw HTML energy. Tables look like tables. Forms look like forms. Everything is honest about what it is. Hover states are blunt: color inversions, not gentle fades.",
+    "avoid": "No rounded corners anywhere. No subtle shadows. No soft gradients. No decorative illustrations. No thin light typography. No gentle transitions or easing curves, use instant or linear. No polish, no refinement, no smoothing of edges. No background blur. No padding excess."
+  },
+  {
+    "name": "Loud",
+    "slug": "loud",
+    "category": "bold",
+    "categoryLabel": "Bold / Expressive",
+    "description": "Oversized type, bright saturated colors, high contrast",
+    "style": "Typography is oversized and bold, headlines dominate the viewport at 48-120px depending on context. Font is a heavy sans-serif, ultra-bold or black weight. Colors are fully saturated primaries and secondaries: electric blue, hot pink, vivid yellow, pure red. Backgrounds alternate between bold color blocks. White text on bright colors, dark text on light sections, always maximum contrast. Spacing is tight between related elements but generous between sections. Buttons are large, high contrast, impossible to miss. Interactive elements are obvious and inviting. The layout is confident and unapologetic. Every element demands attention. The feeling is a concert poster or a protest sign, impossible to ignore, zero subtlety.",
+    "avoid": "No muted colors. No small type. No subtle interactions. No gentle spacing. No thin fonts. No quiet layouts. No understated anything. No low-contrast pairings. If it can be bigger and bolder, it should be."
+  },
+  {
+    "name": "Punk",
+    "slug": "punk",
+    "category": "bold",
+    "categoryLabel": "Bold / Expressive",
+    "description": "Chaotic, overlapping, broken grid, anti-design",
+    "style": "The grid is intentionally broken. Elements overlap, text runs at angles, spacing is deliberately inconsistent. Typography mixes faces aggressively: a heavy sans next to a distressed serif next to monospace. Colors clash on purpose: neon green with hot pink, yellow with black. Backgrounds can be dark with chaotic textures or patterns. Borders are thick or nonexistent, never subtle. Text can be rotated, stacked vertically, or cut off by the viewport edge. Nothing is centered unless ironically. The cursor might be custom. Hover states are dramatic. The interface feels like a zine or a ransom note assembled from magazine cutouts. Rules exist to be broken. Legibility is maintained through contrast, not through convention.",
+    "avoid": "No symmetry. No careful alignment. No matching font pairs. No corporate color palettes. No gentle gradients. No polished iconography. No safe design choices. No respecting conventional margins. No consistency for its own sake."
+  },
+  {
+    "name": "Funky",
+    "slug": "funky",
+    "category": "bold",
+    "categoryLabel": "Bold / Expressive",
+    "description": "Playful geometry, retro colors, weird shapes",
+    "style": "Geometric shapes as decorative and structural elements: circles, triangles, squiggles, blobs. Color palette is retro-bright: mustard, teal, coral, lavender, lime. Typography is a display face with personality for headings, geometric or rounded sans for body. Border radius varies intentionally: some elements fully rounded, others sharp, creating visual rhythm. Layout uses the grid but breaks it playfully, elements can be offset or rotated slightly. Backgrounds mix color blocks asymmetrically. Buttons are bold and shaped, pill or custom shapes. Illustrations or abstract shapes add decoration without cluttering. The feeling is a design conference poster or a creative agency portfolio. Fun, confident, slightly weird in a good way. Motion is bouncy with overshoot easing.",
+    "avoid": "No corporate restraint. No monochrome palette. No stiff grid adherence. No invisible design. No serious tone. No standard rectangular everything. No boring hover states. No stock photography or generic icons."
+  },
+  {
+    "name": "Luxury",
+    "slug": "luxury",
+    "category": "premium",
+    "categoryLabel": "Premium / Refined",
+    "description": "Thin type, generous spacing, gold/black, serif",
+    "style": "Typography is a refined serif or thin sans-serif, light to regular weight, with generous letter-spacing on headings. Color palette is restrained: black, white, warm gold or champagne as accent, deep charcoal for text. Backgrounds are either pure white or rich black, nothing in between except for the gold accent. Spacing is luxuriously generous, elements have room to breathe, nothing is crowded. Borders are thin hairlines or absent entirely. Photography is high-end, editorially cropped, with subtle warm or cool grading. Buttons are minimal, thin-bordered rectangles or subtle text links. Animations are slow and smooth, 400-600ms with gentle easing. The interface feels like a high-end fashion brand or a private banking portal. Every detail signals quality through restraint.",
+    "avoid": "No bold heavy type. No saturated colors. No rounded corners beyond 2px. No playful elements. No dense layouts. No thick borders. No casual typefaces. No stock imagery. No loud hover states. No clutter of any kind."
+  },
+  {
+    "name": "Editorial",
+    "slug": "editorial",
+    "category": "premium",
+    "categoryLabel": "Premium / Refined",
+    "description": "Magazine layout, strong columns, mixed type sizes",
+    "style": "Layout is columnar and asymmetric, inspired by print magazine design. Typography is the star: a distinctive serif for headlines at large scale, paired with a clean sans for body at comfortable reading size. Pull quotes, drop caps, and large numerals add typographic variety. Color is mostly black and white with one or two accent colors used editorially, for emphasis rather than decoration. Images are large, editorially cropped, and given generous space. The grid has clear columns but content can span them dramatically. Whitespace is strategic, creating rhythm between dense and sparse sections. Buttons and CTAs are understated, integrated into the reading flow. The feeling is a feature article in a well-designed magazine. Content leads, design serves.",
+    "avoid": "No UI-heavy chrome. No sidebars cluttered with widgets. No small uniform card grids. No system-default typography. No centered-everything layouts. No icon-heavy navigation. No decorative borders. No competing visual weights."
+  },
+  {
+    "name": "Refined",
+    "slug": "refined",
+    "category": "premium",
+    "categoryLabel": "Premium / Refined",
+    "description": "Muted palette, perfect proportions, quiet confidence",
+    "style": "Muted, desaturated color palette: soft grays, muted blues, warm taupes, dusty sage. Typography is a quality geometric sans or modern serif, medium weight, with perfect optical sizing. Every proportion is considered: padding ratios are consistent, spacing follows a clear scale, alignment is precise without being rigid. Borders are thin and light, almost invisible. Shadows are minimal, just enough to create subtle layering. Buttons are medium-sized, well-proportioned, with muted fills or thin borders. Interactive states are gentle, subtle color shifts or underline reveals. The interface feels like a well-tailored garment: nothing flashy, but everything fits perfectly. Quality is communicated through precision and restraint, not decoration.",
+    "avoid": "No bright colors. No heavy borders. No oversized elements. No casual or display typefaces. No playful motion. No thick shadows. No high-saturation accents. No visual tension. Everything should feel resolved and considered."
+  },
+  {
+    "name": "Corporate",
+    "slug": "corporate",
+    "category": "premium",
+    "categoryLabel": "Premium / Refined",
+    "description": "Sharp, structured, professional, blue/gray",
+    "style": "Color palette anchored in navy, medium blue, cool gray, and white. Typography is a professional sans-serif, regular and semibold weights, clear hierarchy through size and weight. Layout is structured with consistent columns and predictable patterns. Zero border radius on all elements, everything is sharp-cornered. Tables have prominent dark headers. Forms are clean with clear labels above inputs. Borders are 1px solid in cool gray. Spacing is consistent and mathematical. Buttons are rectangular with solid fills for primary and outlined for secondary. Icons are simple, single-weight line icons. The interface feels like a well-organized boardroom: everything in its place, professional but with a subtle edge of modernity. No personality beyond competence and clarity.",
+    "avoid": "No rounded corners. No warm colors. No playful typography. No decorative elements. No gradients beyond very subtle ones. No illustrations. No casual tone. No personality-driven design choices. No inconsistent spacing."
+  },
+  {
+    "name": "Noir",
+    "slug": "noir",
+    "category": "dark",
+    "categoryLabel": "Dark / Moody",
+    "description": "Deep blacks, single accent, cinematic contrast",
+    "style": "Backgrounds are deep black or very dark charcoal, never pure #000. Text is light gray or off-white, never pure white, creating comfortable reading contrast. One accent color only, used sparingly for interactive elements and key highlights: a warm amber, deep red, or cool blue. Typography is a clean sans-serif or a stylish serif, medium weight, with generous line height on dark backgrounds. Shadows are nonexistent or very subtle dark-on-dark. Cards and containers are distinguished by barely-perceptible background shifts, dark gray on darker gray. Borders are thin and very muted. Photography has cinematic treatment: high contrast, deep shadows, desaturated. The interface feels like a film noir scene: dramatic, atmospheric, every element lit with intention.",
+    "avoid": "No bright colors beyond the single accent. No white backgrounds. No light mode. No playful elements. No heavy borders. No colorful illustrations. No high-saturation anything. No pure black or pure white, always slightly off."
+  },
+  {
+    "name": "Stealth",
+    "slug": "stealth",
+    "category": "dark",
+    "categoryLabel": "Dark / Moody",
+    "description": "Near-invisible UI, ultra-dark, muted elements",
+    "style": "Everything is dark and barely there. Background is near-black. Text is medium gray, not bright, just readable enough. Interactive elements are distinguished by the subtlest shifts in brightness, a button is slightly lighter than its surroundings. No accent color, or if one exists it is extremely muted and used rarely. Typography is a thin or regular weight sans-serif, nothing heavy. Borders are 1px in a color barely distinguishable from the background. Hover states reveal elements: text brightens, borders appear, content fades in. The interface feels like it is hiding, revealing itself only when engaged. Information density is low. Spacing is generous. The aesthetic is a blacked-out sports car: you know it is powerful but it does not announce itself.",
+    "avoid": "No bright colors at all. No bold typography. No visible borders unless on hover. No white or light text. No decorative elements. No illustrations. No shadows. No visual noise. The UI should almost disappear."
+  },
+  {
+    "name": "Cyberpunk",
+    "slug": "cyberpunk",
+    "category": "dark",
+    "categoryLabel": "Dark / Moody",
+    "description": "Neon on dark, glitch, futuristic, high-tech grime",
+    "style": "Dark background, near-black with a slight color tint (deep blue, deep purple, or dark teal). Accent colors are electric neon: cyan, magenta, toxic green, hot orange, used for text highlights, borders, and interactive elements. Typography is a condensed or monospace font, uppercase headings with wide letter-spacing. Borders are visible and neon-colored, 1-2px. Elements can have subtle glow effects via colored box-shadows with large blur. Layout is dense and technical, data-forward. Subtle scan-line or noise textures at very low opacity add atmosphere. Animations are quick and sharp, not gentle. The interface feels like a hacking terminal in a sci-fi film: information-dense, visually electric, slightly dangerous. CRT monitor energy.",
+    "avoid": "No soft colors. No rounded friendly shapes. No gentle transitions. No warm tones. No serif fonts. No organic textures. No whitespace-heavy layouts. No corporate restraint. Nothing that feels safe or polished."
+  },
+  {
+    "name": "Terminal",
+    "slug": "terminal",
+    "category": "technical",
+    "categoryLabel": "Technical",
+    "description": "Green on black, monospace, command-line aesthetic",
+    "style": "Monospace font exclusively, for everything. Background is black or very dark gray. Text is green, amber, or white, referencing classic terminal color schemes. No font size variation beyond one or two sizes. Hierarchy is achieved through color, prefixes, and indentation rather than size. Layout is single-column or simple two-pane. No rounded corners, no shadows, no gradients. Borders are single-character-style: dashes, pipes, plus signs, or thin 1px solid lines. Interactive elements are text-based: [SUBMIT], [CANCEL], links are underlined. Status indicators use color: green for success, red for error, yellow for warning. The interface feels like a well-designed CLI: efficient, information-dense, zero decoration. Everything could theoretically render in a terminal emulator.",
+    "avoid": "No proportional fonts. No rounded corners. No shadows. No gradients. No images. No color beyond the terminal palette. No padding excess. No gentle animations. No soft anything. If it would not work in a terminal, it does not belong."
+  },
+  {
+    "name": "Blueprint",
+    "slug": "blueprint",
+    "category": "technical",
+    "categoryLabel": "Technical",
+    "description": "Technical drawing, grid lines, annotation style",
+    "style": "Blue-tinted color scheme: deep blue background or white background with blue grid lines. Typography is a monospace or technical sans-serif. Layout features visible grid lines as part of the aesthetic, not just underlying structure. Elements have annotation-style labels: small text with leader lines pointing to components. Borders are thin and precise. Measurements and dimensions can be shown. Corner marks or crop marks appear as decorative structural elements. Icons are technical, thin-line, architectural. The feeling is a technical specification document or an architectural blueprint: precise, informational, where the structure itself is beautiful. Numbers are prominent. Coordinates, scales, and reference markers add to the technical atmosphere.",
+    "avoid": "No warm colors. No organic shapes. No soft shadows. No friendly typography. No rounded corners. No photographic imagery. No decorative illustration. No casual tone. Everything should feel measured and specified."
+  },
+  {
+    "name": "HUD",
+    "slug": "hud",
+    "category": "technical",
+    "categoryLabel": "Technical",
+    "description": "Heads-up display, thin lines, data-dense, military",
+    "style": "Dark background, typically near-black. UI elements are constructed from thin lines, 1px, in cyan, green, or amber on dark. Typography is a condensed sans-serif or monospace, uppercase with wide letter-spacing for labels. Data is displayed numerically with units. Circular gauges, linear indicators, and segmented displays are appropriate. Layout is dense and structured, information is organized into defined regions with thin border frames. Corner brackets or targeting reticules frame important content. Elements can have subtle transparency. Animations are precise: data ticking up, indicators sweeping, elements fading in rapidly. The feeling is a fighter jet cockpit or a mission control screen: every element serves a function, information density is high, aesthetics emerge from utility.",
+    "avoid": "No rounded friendly shapes. No warm colors. No decorative elements. No thick borders. No large type. No generous whitespace. No casual tone. No photographic imagery. Nothing that does not convey data or enable action."
+  },
+  {
+    "name": "Dashboard",
+    "slug": "dashboard",
+    "category": "technical",
+    "categoryLabel": "Technical",
+    "description": "Data-forward, compact, status indicators",
+    "style": "Layout is dense but organized, a clear grid of cards containing metrics, charts, and tables. Typography is a clean sans-serif, small to medium size, with tabular number alignment. Color is functional: green for positive, red for negative, blue for neutral, gray for inactive. Cards have subtle borders and minimal shadows. Stat numbers are prominent, labels are small and muted. Charts are clean with minimal decoration, no 3D effects. Tables are compact with alternating row backgrounds. Spacing is tight but consistent. Status dots and indicator badges are small and color-coded. The interface prioritizes information scanning speed. Every element answers a question: how much, how many, what status. The feeling is a well-organized control panel where everything is visible at a glance.",
+    "avoid": "No large whitespace gaps. No decorative illustration. No oversized typography. No full-width hero sections. No single-column layouts. No hidden information. No vague status indicators. No artistic flourishes. Function over form in every decision."
+  },
+  {
+    "name": "Glass",
+    "slug": "glass",
+    "category": "modern",
+    "categoryLabel": "Modern / Trending",
+    "description": "Backdrop blur, translucent layers, floating feel",
+    "style": "Containers are translucent with backdrop-filter blur, showing a hint of what is behind them. Backgrounds are gradients or colorful imagery that the glass effect reveals. Border is 1px solid with low opacity white or light color, creating a frosted edge. Border radius is generous, 12-20px on cards, 8-12px on buttons. Shadows are soft and diffused, giving elements a floating quality. Typography is a clean sans-serif, medium weight, in white or near-white on darker glass, dark on lighter glass. Colors are muted through the glass layer, with one or two vibrant accents visible beneath. Spacing is generous, elements float in space rather than sitting on a surface. The feeling is iOS or visionOS: layered, dimensional, elegant, with depth created through transparency rather than shadow.",
+    "avoid": "No sharp corners. No opaque solid backgrounds on glass elements. No thick borders. No heavy type weights. No flat design without any depth. No harsh color contrasts. No dense information layouts, glass needs breathing room."
+  },
+  {
+    "name": "Gradient",
+    "slug": "gradient",
+    "category": "modern",
+    "categoryLabel": "Modern / Trending",
+    "description": "Smooth color transitions, vibrant, depth",
+    "style": "Gradients are the primary visual element, used on backgrounds, buttons, text fills, and accent elements. Transitions are smooth, multi-stop, and flow between complementary or analogous colors: purple to blue, orange to pink, teal to green. Backgrounds feature large-scale gradients, subtle on light surfaces, dramatic on dark. Text can use gradient fills on headings for impact. Buttons have gradient fills with lighter hover states. Typography is a modern geometric sans-serif, clean enough to not compete with the color. Cards sit on top of gradient backgrounds with subtle shadows. Border radius is medium, 8-12px. The overall feeling is modern, vibrant, and energetic, like a Spotify or Instagram-era design. Color creates atmosphere and emotion. Gradients should feel natural, like light or water, not like a Photoshop preset.",
+    "avoid": "No flat monochrome palettes. No abrupt color stops in gradients. No more than two or three colors per gradient. No garish or rainbow gradients. No grayscale UI. No sharp corners on gradient-filled elements. No competing patterns or textures over gradients."
+  },
+  {
+    "name": "Neomorphism",
+    "slug": "neomorphism",
+    "category": "modern",
+    "categoryLabel": "Modern / Trending",
+    "description": "Soft extruded shapes, same-color shadows, tactile",
+    "style": "Elements appear to extrude from the background surface, created by dual shadows: a light shadow on one side and a dark shadow on the other, both in the same hue family as the background. Background is a single muted color, typically light gray, soft blue-gray, or warm beige. All elements share this base color with shadow-only differentiation. Border radius is generous, 12-20px, everything feels soft and rounded. Typography is a medium-weight sans-serif in a slightly darker shade of the background color. Pressed/active states invert the shadows to create an inset effect. No borders, depth comes entirely from shadow direction. Colors are extremely muted, almost monochromatic. The feeling is a soft clay surface where elements are gently pushed out or pressed in. Tactile, physical, quiet.",
+    "avoid": "No flat design. No bright colors. No hard borders. No sharp corners. No high contrast. No dark backgrounds. No bold typography. No complex multi-color palettes. No harsh shadow edges. Shadows must always be soft and in the same color family as the surface."
+  },
+  {
+    "name": "Flat",
+    "slug": "flat",
+    "category": "modern",
+    "categoryLabel": "Modern / Trending",
+    "description": "Zero depth, solid colors, geometric, Material-like",
+    "style": "Absolutely no shadows, no gradients, no texture. Every element is a solid color field. Color palette uses confident, slightly desaturated tones: medium blue, coral, teal, warm gray, soft yellow. Typography is a geometric sans-serif, medium weight, with clear size hierarchy. Icons are solid filled or outlined, consistent weight, geometric. Buttons are solid filled rectangles or pills with white text on color, or outlined with color text. Layout is grid-based with clear sections defined by color blocks. Cards are flat rectangles differentiated by background color, not elevation. Borders are optional and thin. Hover states change background color, no other effect. The feeling is Windows Metro or early Material Design: confident, colorful, paper-flat. Information hierarchy comes from color and size, never from perceived depth.",
+    "avoid": "No shadows of any kind. No gradients. No textures. No transparency. No backdrop blur. No depth or elevation. No skeuomorphic elements. No photography that breaks the flat aesthetic. Every surface is a single solid color."
+  },
+  {
+    "name": "Bento",
+    "slug": "bento",
+    "category": "modern",
+    "categoryLabel": "Modern / Trending",
+    "description": "Grid of rounded cards, Apple-inspired, modular",
+    "style": "Layout is a grid of rounded-corner cards of varying sizes, like a bento box. Cards are 16-24px border radius, arranged in an asymmetric grid where some span multiple columns or rows. Backgrounds are light gray or very light off-white, cards are white or very subtle color tints. Shadows are minimal and soft. Typography is a system-style sans-serif like SF Pro or Inter, clean and readable. Each card contains one idea, one metric, one feature. Color accents are used sparingly within individual cards, not globally. Icons are SF Symbol style, medium weight, single color. Spacing between cards is consistent, 16-20px gaps. The overall feeling is Apple marketing pages or a Notion dashboard: modular, scannable, each piece self-contained. Content density is medium, cards have comfortable internal padding.",
+    "avoid": "No uniform card sizes. No single-column layouts. No sharp corners on cards. No heavy borders. No dark backgrounds for the grid container. No text-heavy cards without visual hierarchy. No cards without clear internal padding."
+  },
+  {
+    "name": "Whimsical",
+    "slug": "whimsical",
+    "category": "playful",
+    "categoryLabel": "Playful",
+    "description": "Illustrations, bouncy, unexpected, delightful",
+    "style": "Custom illustrations are featured throughout, hand-drawn or vector with personality, not generic stock. Color palette is vibrant but not harsh: lavender, mint, peach, sky blue, soft coral. Typography mixes a playful display font for headings with a clean readable sans for body. Rounded corners everywhere, 12-20px. Subtle animations add delight: elements bounce in, icons wiggle on hover, micro-interactions surprise. Layout breaks from rigid grids occasionally, elements can float or overlap slightly. Empty states have charming illustrations. Error messages are friendly, not alarming. Loading states are animated characters or progress illustrations. The interface feels like it was made by someone who genuinely enjoys making things. Personality shows in every detail. Nothing is generic.",
+    "avoid": "No corporate tone. No stock illustrations. No sterile layouts. No boring error states. No lifeless hover effects. No generic icon sets. No rigid symmetry everywhere. No absence of personality."
+  },
+  {
+    "name": "Bubbly",
+    "slug": "bubbly",
+    "category": "playful",
+    "categoryLabel": "Playful",
+    "description": "Pill shapes, rounded everything, friendly pastels",
+    "style": "Everything is rounded: buttons are pill-shaped with full border-radius, cards have 20-24px radius, input fields are rounded, even images have generous border radius. Color palette is soft pastels: baby blue, light pink, mint green, lavender, cream yellow. Typography is a rounded sans-serif, medium weight, nothing angular or sharp. Shadows are soft and colorful, tinted with the element color at low opacity. Backgrounds layer light pastels, creating a candy-like depth. Tags and badges are small pills with pastel fills. Interactive states are gentle: slight scale increase on hover, color brightens, shadows deepen slightly. The interface feels like a friendly consumer app designed for approachability. Everything is soft, touchable, and non-threatening. Like holding a smooth pebble.",
+    "avoid": "No sharp corners anywhere. No dark color palettes. No heavy bold type. No harsh contrasts. No angular geometric shapes. No dense data layouts. No serious or corporate tone. No flat design without the soft dimension."
+  },
+  {
+    "name": "Retro",
+    "slug": "retro",
+    "category": "playful",
+    "categoryLabel": "Playful",
+    "description": "80s/90s palette, pixel hints, nostalgia",
+    "style": "Color palette references the 80s and 90s: hot pink, electric purple, teal, neon yellow, with black or dark navy as base. Typography can include a pixel font or bitmap-style font for accents, paired with a geometric sans for readability. Elements reference old computing: visible window chrome, title bars, close buttons, pixelated icons or borders. Shadows can be hard-offset (no blur, solid color, offset 3-4px) referencing old UI. Layout can use visible containers that reference windows or dialog boxes. Hover states are immediate, no smooth transitions. Cursors can be custom. The feeling is Windows 95 meets vaporwave: nostalgic, slightly ironic, referencing digital history with modern quality. Fun without being childish, retro without being dated.",
+    "avoid": "No contemporary flat design. No subtle minimalism. No gentle gradients. No invisible UI. No modern glass effects. No stock photography. No corporate restraint. Let the retro aesthetic be visible and proud."
+  },
+  {
+    "name": "Cartoonish",
+    "slug": "cartoonish",
+    "category": "playful",
+    "categoryLabel": "Playful",
+    "description": "Thick outlines, bright primary colors, fun",
+    "style": "Visible thick outlines on elements, 2-3px, in dark color or black, giving everything a drawn quality. Color palette is bright primary and secondary: red, blue, yellow, green, orange, used confidently in large blocks. Typography is a bold, rounded face, slightly chunky, with personality. Card and button outlines are visible and thick. Shadows are hard-offset and solid, no blur, creating a sticker or comic-panel effect. Icons are chunky and bold with thick strokes. Layout is clear and simple, not sophisticated. Interactive states are obvious and fun: color fills, scale bounces, outline thickens. The interface feels like a well-designed children's app or a Cartoon Network website: bold, clear, fun, with nothing subtle about it. Every element is visually confident and outlined.",
+    "avoid": "No thin lines. No subtle design. No muted colors. No invisible interactions. No minimal aesthetic. No sophisticated serif typography. No dark moody palettes. No ambiguous UI elements. Everything should be clear, bold, and outlined."
+  }
+]
